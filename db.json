@@ -1,0 +1,110 @@
+{
+  "user-list": [
+    {
+      "fname": "sundram",
+      "lname": "singh",
+      "dob": "2022-11-30T10:20:36.547Z",
+      "username": "anandkkk",
+      "email": "aaa@gmail.com",
+      "password": "Abcd@122",
+      "phone": [
+        "7689765439"
+      ],
+      "id": 5
+    },
+    {
+      "fname": "anand",
+      "lname": "ranjan",
+      "dob": "2022-12-02T07:26:14.504Z",
+      "username": "anand",
+      "email": "abc12@gmail.com",
+      "password": "Abc@123c",
+      "phone": [
+        "7689765439"
+      ],
+      "id": 6
+    },
+    {
+      "fname": "sundram",
+      "lname": "singh",
+      "dob": "2022-12-02T09:34:07.352Z",
+      "username": "zzzzzz",
+      "email": "aaa@gmail.com",
+      "password": "Abc@123s",
+      "phone": [
+        "7689765439"
+      ],
+      "id": 7
+    },
+    {
+      "fname": "gft",
+      "lname": "hfyf",
+      "dob": "2022-12-25T17:30:28.526Z",
+      "username": "gyy",
+      "email": "gg@vg.com",
+      "password": "2@Sggghg",
+      "phone": [
+        "9987654321"
+      ],
+      "id": 8
+    },
+    {
+      "fname": "hddh",
+      "lname": "dhd",
+      "dob": "2022-12-25T17:42:45.711Z",
+      "username": "dhdh",
+      "email": "hh@hh",
+      "password": "2@Dgsgsg",
+      "phone": [
+        "9987654321"
+      ],
+      "id": 9
+    },
+    {
+      "fname": "sgsg",
+      "lname": "bghs",
+      "dob": "2022-12-25T17:43:32.162Z",
+      "username": "hss",
+      "email": "ss@gg",
+      "password": "2@fdhdjD",
+      "phone": [
+        "9987654321"
+      ],
+      "id": 10
+    },
+    {
+      "fname": "fname",
+      "lname": "lname",
+      "dob": "2022-12-26T07:19:18.035Z",
+      "username": "username",
+      "email": "sundramkumar773@gmail.com",
+      "password": "Sunam@16",
+      "phone": [
+        "8686462851"
+      ],
+      "id": 11
+    },
+    {
+      "fname": "sss",
+      "lname": "sssssss",
+      "dob": "2023-04-16T12:49:22.977Z",
+      "username": "ssss",
+      "email": "sss@ddd",
+      "password": "1!@Ahhhs",
+      "phone": [
+        "9987654355"
+      ],
+      "id": 12
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

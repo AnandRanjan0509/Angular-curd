@@ -1,0 +1,24 @@
+<div>
+  <h3 *ngIf=!data>{{"hindi.data"| translate}}</h3>
+  <h3 *ngIf=data>{{"hindi.dataA"| translate}}</h3>
+</div>
+<div>
+  <button
+    routerLink="admin/users"
+    style="margin-left: 10px"
+    mat-raised-button
+    color="primary"
+   matDialogClose
+  >
+    {{"hindi.yes"|translate}}
+  </button>
+
+  <button
+    style="margin-left: 10px"
+    mat-raised-button
+    color="warn"
+   matDialogClose
+  >
+  {{"hindi.no"|translate}}
+  </button>
+</div>

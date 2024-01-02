@@ -1,0 +1,49 @@
+{
+    "hindi":{
+        "welcomeA":"Welcome to user list",
+        "user":"User",
+        "welcomeB":"welcome",
+        "data": "Do you want to see User List",
+        "dataA":"Do you want to delete User",
+        "fname":"First Name",
+        "lname":"Last Name",
+        "username":"Username",
+        "dob":"Date of birth",
+        "email":"e-mail",
+        "password":"enter your password",
+        "phone":"phone",
+        "addphone":"Add Contact",
+        "actionbtn":"Save",
+        "actionbtnB":"Update",
+        "actionuser":"Add User",
+        "actionuserB":"Update",
+        "fnameVA":"First Name is required",
+        "fnameVB":"First Name should be Alpha",
+        "fnameVC":"Minimun length should be atleast 3 characters",
+        "fnameVD":"Maximum  length is 150 characters",
+        "lnameVA":"Last Name is required",
+        "lnameVB":"Last Name should be Alpha",
+        "userVA":"User Name is required",
+        "userVB":"Accepts only alphabets and numbers",
+        "dobVA":"Please provide a valid date of birth",
+        "dobVB":"MM/DD/YYYY ",
+        "emailVA":"Please provide a valid email",
+        "emailVB":"Invalid Email",
+        "passVA":"Password is required",
+        "passVB":"Password should be of 8 characters containing atleast 1 capital,1 number and 1 special character!",
+        "phoneVA":"Phone is required",
+        "search":"search",
+        "filter":"Filter",
+        "yes":"Yes",
+        "no":"No",
+        "full name":"Full Name"
+        
+
+        
+
+
+
+
+    }
+
+}

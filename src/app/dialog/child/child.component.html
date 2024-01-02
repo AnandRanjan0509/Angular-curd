@@ -1,0 +1,292 @@
+<div mat-dialog-content>
+  <form *ngIf="userForm" [formGroup]="userForm">
+    <!-- <mat-form-field appearance="outline">
+            <mat-label>Enter Name</mat-label>
+            <input formControlName="name" matInput placeholder="Name" >
+            
+        </mat-form-field> -->
+
+    <!-- <mat-form-field appearance="outline">
+      <mat-label >First Name</mat-label>
+      <input  matInput formControlName="fname" matInput placeholder="First Name"  /> -->
+    <!-- <mat-error>
+      <span *ngIf="fname.required">This field is required</span>
+      <span>please enter the name of atleast 3 characters</span>
+      <span>Name should not exceed 150 characters</span>
+      <span>Name only supports letters</span>
+      </mat-error>
+       -->
+    <!-- </mat-form-field>  -->
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{"hindi.fname"| translate}}</mat-label>
+      <input
+        matInput
+        formControlName="fname"
+        placeholder="First Name"
+        (keydown)="[space($event)]"
+      />
+      <mat-error *ngIf="f['fname'].touched && f['fname'].invalid">
+        <mat-error *ngIf="f['fname'].hasError('required')"
+          >{{"hindi.fnameVA"| translate}}</mat-error
+        >
+        <mat-error
+          *ngIf="
+            !f['fname'].hasError('required') &&
+            !f['fname'].hasError('minlength') &&
+            f['fname'].hasError('pattern')
+          "
+        >
+        {{"hindi.fnameVB"| translate}}
+        </mat-error>
+        <mat-error
+          *ngIf="
+            !f['fname'].hasError('required') && f['fname'].hasError('minlength')
+          "
+        >
+        {{"hindi.fnameVC"| translate}}
+        </mat-error>
+        <mat-error
+          *ngIf="
+            !f['fname'].hasError('required') &&
+            !f['fname'].hasError('minlength') &&
+            f['fname'].hasError('maxlength')
+          "
+        >
+        {{"hindi.fnameVD"| translate}}
+                  
+
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{"hindi.lname"| translate}}</mat-label>
+      <input formControlName="lname" matInput placeholder="Last Name" />
+      <mat-error *ngIf="f['lname'].touched && f['lname'].invalid">
+        <mat-error *ngIf="f['lname'].hasError('required')"
+          >{{"hindi.lnameVA"| translate}}</mat-error
+        >
+        <mat-error
+          *ngIf="
+            !f['lname'].hasError('required') && f['lname'].hasError('pattern')
+          "
+        >
+        {{"hindi.lnameVB"| translate}}
+        </mat-error>
+        <!-- <mat-error *ngIf="!f['lname'].hasError('required') && f['lname'].hasError('minlength')">
+        Min length should be 3
+       </mat-error> -->
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{"hindi.username"| translate}}</mat-label>
+      <input formControlName="username" matInput placeholder="User Name" />
+      <mat-error *ngIf="f['username'].touched && f['username'].invalid">
+        <mat-error *ngIf="f['username'].hasError('required')"
+          >{{"hindi.userVA"| translate}}</mat-error
+        >
+        <mat-error
+          *ngIf="
+            !f['username'].hasError('required') &&
+            f['username'].hasError('pattern')
+          "
+        >
+        {{"hindi.userVB"| translate}}
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{"hindi.dob"| translate}}</mat-label>
+      <input
+        formControlName="dob"
+        matInput
+        [matDatepicker]="picker"
+        max="{{ today }}"
+        min="1970-01-01"
+      />
+      <mat-error *ngIf="f['dob'].touched && f['dob'].invalid"></mat-error>
+      <mat-error *ngIf="f['dob'].hasError('required')"
+        >{{"hindi.dobVA"| translate}}</mat-error
+      >
+
+      <mat-hint>{{"hindi.dobVB"| translate}}</mat-hint>
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>{{"hindi.email"| translate}}</mat-label>
+      <input formControlName="email" matInput placeholder="e-mail" />
+      <mat-error *ngIf="f['email'].touched && f['email'].invalid">
+        <mat-error *ngIf="f['email'].hasError('required')"
+          >{{"hindi.emailVA"| translate}}</mat-error
+        >
+        <mat-error
+          *ngIf="
+            !f['email'].hasError('required') && f['email'].hasError('email')
+          "
+        >
+        {{"hindi.emailVB"| translate}}
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <!-- <mat-form-field appearance="outline">
+      <mat-label>Enter Password</mat-label>
+
+      <div class="par">
+        <div>
+          <input
+            [type]="changetype ? 'password' : 'text'"
+            formControlName="password"
+            matInput
+            placeholder="Password"
+            
+          />
+        </div>
+        <div>
+          <mat-icon class="eye" (click)="eye()">{{ act }}</mat-icon>
+        </div>
+      </div>
+     
+      
+      <mat-error *ngIf="f['password'].touched && f['password'].invalid">
+        <mat-error *ngIf="f['password'].hasError('required')"
+          >Password is required</mat-error
+        >
+        <mat-error
+          *ngIf="
+            !f['password'].hasError('required') &&
+            f['password'].hasError('pattern')
+          "
+        >
+          Password must contain atleast 1 capital,1 number and 1 special
+          character!
+        </mat-error> </mat-error
+      ><br />
+    </mat-form-field> -->
+
+    <mat-form-field appearance="outline">
+
+      <mat-label>{{"hindi.password"| translate}}</mat-label>
+      <input matInput [type]="hide ? 'password' : 'text'" formControlName="password"/>
+      <button
+        mat-icon-button
+        matSuffix
+        (click)="hide = !hide"
+        [attr.aria-label]="'Hide password'"
+        [attr.aria-pressed]="hide"
+      >
+        <mat-icon (click)="eye()">{{
+          hide ? "visibility_off" : "visibility"
+        }}</mat-icon>
+      </button>
+      <mat-error *ngIf="f['password'].touched && f['password'].invalid">
+        <mat-error *ngIf="f['password'].hasError('required')"
+          >{{"hindi.passVA"| translate}}</mat-error
+        >
+        <mat-error
+          *ngIf="
+            !f['password'].hasError('required') &&
+            f['password'].hasError('pattern')
+          "
+        >
+        {{"hindi.passVB"| translate}}
+        </mat-error> </mat-error
+      >
+    </mat-form-field><br><br>
+
+    <div formArrayName="phone">
+      <ng-container *ngFor="let value of userFormGroups.controls; index as i">
+        <div>
+          <div class="child">
+            <select class="butt">
+              <option>+91</option>
+            </select>
+          </div>
+          <!-- <div class="child" *ngFor="let j of editData.phone"> -->
+          <div class="child child1">
+            <mat-form-field appearance="outline">
+              <mat-label>{{"hindi.phone"| translate}}</mat-label>
+              <input
+                formControlName="{{ i }}"
+                matInput
+                placeholder="Phone"
+                [mask]="'0000000000'"
+              />
+              <mat-error
+                *ngIf="
+                  phoneArray.controls[i].touched &&
+                  phoneArray.controls[i].invalid
+                "
+              >
+                <mat-error *ngIf="phoneArray.controls[i].hasError('required')"
+                  >{{"hindi.phoneVA"| translate}}
+                </mat-error>
+              </mat-error>
+              <!-- <mat-error
+                      *ngIf="
+                        !phoneArray.controls[i].hasError('required') &&
+                        phoneArray.controls[i].hasError('minlength')
+                      "
+                    >
+                      Please provide an indian number
+                    </mat-error>
+                    <mat-error
+                      *ngIf="
+                        !phoneArray.controls[i].hasError('required') &&
+                        !phoneArray.controls[i].hasError('minlength') &&
+                        phoneArray.controls[i].hasError('maxlength')
+                      "
+                    >
+                      Please provide an indian number
+                    </mat-error>
+                    <mat-error
+                      *ngIf="
+                        !phoneArray.controls[i].hasError('required') &&
+                        !phoneArray.controls[i].hasError('minlength') &&
+                        !phoneArray.controls[i].hasError('maxlength') &&
+                        phoneArray.controls[i].hasError('pattern')
+                      "
+                    >
+                      Please provide an indian number
+                    </mat-error>
+      
+                    <mat-error
+                        *ngIf="!phoneArray.controls[i].hasError('required') &&  !phoneArray.controls[i].hasError('pattern') && phoneArray.controls[i].hasError('minlength') "
+                      >
+                        Min length should be 10
+                      </mat-error> -->
+            </mat-form-field>
+          </div>
+
+          <div class="child">
+            <button
+              class="child"
+              mat-icon-button
+              color="warn"
+              disabled="{{ buttonDisabled }}"
+            >
+              <mat-icon (click)="[delphone(i)]; $event.preventDefault()"
+                >delete</mat-icon
+              >
+            </button>
+          </div>
+        </div>
+      </ng-container>
+
+      <button
+        style="color: gray; border-radius: 20px; border-width: 0px"
+        (click)="[addphone()]"
+        type="button"
+      >
+      {{"hindi.addphone"| translate}}
+      </button>
+    </div>
+  </form>
+</div>
+
+<!-- <app-child></app-child> -->
